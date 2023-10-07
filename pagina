@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, cyan, yellow);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: dodgerblue;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Nome">
+        <br>
+        <input type="password" id="password" placeholder="Senha">
+        <br>
+        <button onclick="attemptLogin()">Enviar</button>
+    </div>
+    <script>
+        function attemptLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "pedro.said" && password === "20092010") {
+                window.location.href = "https://sites.google.com/view/siteportifoliosite-naexiste/sua-conta";
+            } else {
+                alert("Credenciais inválidas. Tente novamente.");
+            }
+        }
+    </script>
+</body>
+</html>
